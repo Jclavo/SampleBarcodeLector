@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Lector QR
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,17 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Lector QR</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong>Ready to read a QR code?</strong>
+    <br>
+    <!-- <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
+    <ion-button color="primary" (click)=openLectorQR()>Open Lector QR</ion-button>
+
+    <div *ngIf="result"><h3>Scanned: </h3><p>{{result}}</p></div>
+    <div *ngIf="error"><h3 style="color:red;">Error: </h3><p style="color:red;">{{error}}</p></div>
   </div>
 </ion-content>
