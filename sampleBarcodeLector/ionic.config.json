@@ -1,5 +1,7 @@
 {
   "name": "sampleBarcodeLector",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
