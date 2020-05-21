@@ -15,7 +15,6 @@ export class HomePage {
   constructor(private barcodeScanner: BarcodeScanner) { }
 
   openLectorQR() {
-
     this.barcodeScanner.scan().then(barcodeData => {
       this.result = barcodeData.text;
       console.log('Barcode data', this.result);
@@ -23,6 +22,5 @@ export class HomePage {
       this.error = err;
       console.log('Error', this.error);
     });
-
   }
 }
